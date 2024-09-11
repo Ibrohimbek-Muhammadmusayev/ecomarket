@@ -1,13 +1,13 @@
 import TopCorusel from "@/components/antdesign/top-corusel";
 import Navbar from "@/components/navbar";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 import Footer from "@/components/footer";
 
 export default function Home() {
-  const skletondata = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,];
+  // const skletondata = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,];
   return (
     <div className="w-full">
       <div className="">
