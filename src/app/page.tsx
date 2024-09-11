@@ -1,113 +1,76 @@
+import TopCorusel from "@/components/antdesign/top-corusel";
+import Navbar from "@/components/navbar";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import "./globals.css";
+import Footer from "@/components/footer";
 
 export default function Home() {
+  const skletondata = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,];
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="w-full">
+      <div className="">
+        <Navbar/>
+        <div className="max-w-[1440px] mx-auto h-full flex flex-col">
+          <div className="mx-[20px] overflow-hidden mt-[160px] rounded-[12px]">
+            <TopCorusel/>
+          </div>
+          <div className="flex justify-center items-center my-[50px]">
+            <Link href={'/products'} className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-green-500 border-2 border-green-500 rounded-full hover:text-white group hover:bg-gray-50">
+              <span className="absolute left-0 block w-full h-0 transition-all bg-green-400 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+              <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+              <Image
+                className="fill-white"
+                src={'./logo.svg'}
+                alt="logo"
+                width={25}
+                height={20}
+              />
+              </span>
+              <span className="relative">start buying now</span>
+            </Link>
+          </div>
+          <div className="w-full h-[100%] shadow-inner my-[60px] overflow-hidden flex justify-center gap-[40px] flex-wrap rounded-md">
+            {/* {skletondata.map((item) => (
+              <div className="rounded-[12px] overflow-hidden border h-[400px] w-[250px]">
+                <div className="w-[250px] h-[200px] bg-slate-400"></div>
+                <div className="px-[15px] pt-[10px]">
+                  <div className="h-[10px] animate-pulse bg-slate-200 rounded"></div>
+                  <div className="grid animate-pulse grid-cols-3 gap-4 mt-[10px]">
+                    <div className="h-[10px] bg-slate-200 rounded col-span-2"></div>
+                    <div className="h-[10px] bg-slate-200 rounded col-span-1"></div>
+                  </div>
+                  <div className="h-[10px] mt-[10px] animate-pulse max-w-[170px] bg-slate-200 rounded col-span-1"></div>
+                  <div className="h-[10px] mt-[10px] animate-pulse max-w-[70px] bg-slate-200 rounded col-span-1"></div>
+                  <Button className="w-full animate-pulse mt-[10px] bg-slate-200">
+                  </Button>
+                </div>
+              </div>
+            ))} */}
+            {/* <div className="rounded-[12px] overflow-hidden border h-[400px] w-[250px]">
+              <div className="w-[250px] h-[200px] bg-slate-400"></div>
+              <div className="px-[15px]">
+                <h1>name</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione non minus reprehenderit.</p>
+                <h2>23 $</h2>
+                <Button className="w-full">
+                  Buy now
+                </Button>
+              </div>
+            </div> */}
+          </div>
+          <div className="px-[20px]">
+            <div className="flex justify-center items-center">
+              <h1 className="text-[40px] font-bold text-green-500">Delivery area</h1>
+            </div>
+            <div className="w-full h-[400px] mt-[60px] outline-double overflow-hidden rounded-[12px] mb-[100px] shadow-lg">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d38331.206842893705!2d72.06996736189463!3d40.528716064715546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1725472102756!5m2!1sru!2s" width="100%" height="400" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
         </div>
+        <Footer/>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
