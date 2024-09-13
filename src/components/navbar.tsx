@@ -48,24 +48,34 @@ export default function Navbar(){
                     <div className="flex items-center justify-between py-1">
                         <ul className="flex gap-[50px]">
                             <Link href={'/'}>
-                                <li>Home</li>
+                                <li className="font-semibold">Home</li>
                             </Link>
                             <Link href={'/'}>
-                                <li>All Products</li>
+                                <li className="font-semibold">About</li>
                             </Link>
+                            <Popover>
+                                <PopoverTrigger>
+                                    <li className="font-semibold">Categoriya</li>
+                                </PopoverTrigger>
+                                <PopoverContent className="w-full">
+                                    <div className="w-[800px]">
+                                        1
+                                    </div>
+                                    <div className="w-[800px]">
+                                        2
+                                    </div>
+                                    <div className="w-[800px]">
+                                        3
+                                    </div>
+                                </PopoverContent>
+                            </Popover>
                             <Link href={'/'}>
-                                <li>About</li>
-                            </Link>
-                            <Link href={'/'}>
-                                <li>Cantact</li>
-                            </Link>
-                            <Link href={'/'}>
-                                <li>Delivery area</li>
+                                <li className="font-semibold">Delivery area</li>
                             </Link>
                         </ul>
                         <div className="sm:hidden md:hidden lg:hidden xl:flex 2xl:flex flex gap-[40px]">
-                            <h1>+998905843504</h1>
-                            <h1>ibrohimbekmuhammadmusayev@gmail.com</h1>
+                            <h1 className="font-semibold">+998905843504</h1>
+                            <h1 className="font-semibold">ibrohimbekmuhammadmusayev@gmail.com</h1>
                             <div className="flex gap-[10px]">
                                 <Link href={'https://t.me/Ibrohimbek_enginer'}>
                                     <Image
@@ -97,7 +107,7 @@ export default function Navbar(){
                                     />
                                 </Space>
                             </div>
-                            <div className="">
+                            <div className="sm:block md:block lg:block xl:hidden 2xl:hidden">
                                 <Button onClick={showModal} className="bg-white">
                                     <Image
                                         src={'/box.png'}
@@ -197,14 +207,29 @@ export default function Navbar(){
                         />
                     </Button>
                     <ul className="sm:hidden md:flex lg:flex xl:flex 2xl:flex  flex gap-[20px]">
-                        <Button className="bg-white w-[50px] mobilhidden p-0">
-                            <Image
-                                src={'/Shopping-Cart.gif'}
-                                alt="category"
-                                width={30}
-                                height={30}
-                            />
-                        </Button>
+                        <Popover>
+                            <PopoverTrigger>
+                                <div className="bg-white flex justify-center items-center w-[50px] h-[36px] rounded-[6px] mobilhidden p-0">
+                                    <Image
+                                        src={'/Shopping-Cart.gif'}
+                                        alt="category"
+                                        width={30}
+                                        height={30}
+                                    />
+                                </div>
+                            </PopoverTrigger>
+                            <PopoverContent className="w-full">
+                                <div className="w-[800px]">
+                                    1
+                                </div>
+                                <div className="w-[800px]">
+                                    2
+                                </div>
+                                <div className="w-[800px]">
+                                    3
+                                </div>
+                            </PopoverContent>
+                        </Popover>
                         <div className="mobilhidden flex gap-[12px]">
                             <Link href={'/login'}>
                                 <Button className="bg-green-800">Login</Button>

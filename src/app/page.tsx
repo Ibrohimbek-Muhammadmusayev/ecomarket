@@ -5,9 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 import Footer from "@/components/footer";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  // const skletondata = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,];
+  const skletondata = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,];
   return (
     <div className="w-full">
       <div className="">
@@ -28,26 +29,36 @@ export default function Home() {
                 height={20}
               />
               </span>
-              <span className="relative">start buying now</span>
+              {/* <span className="relative">start buying now</span> */}
+              <span className="relative">All Products</span>
             </Link>
           </div>
-          <div className="w-full h-[100%] shadow-inner my-[60px] overflow-hidden flex justify-center gap-[40px] flex-wrap rounded-md">
-            {/* {skletondata.map((item) => (
-              <div className="rounded-[12px] overflow-hidden border h-[400px] w-[250px]">
-                <div className="w-[250px] h-[200px] bg-slate-400"></div>
-                <div className="px-[15px] pt-[10px]">
-                  <div className="h-[10px] animate-pulse bg-slate-200 rounded"></div>
-                  <div className="grid animate-pulse grid-cols-3 gap-4 mt-[10px]">
-                    <div className="h-[10px] bg-slate-200 rounded col-span-2"></div>
-                    <div className="h-[10px] bg-slate-200 rounded col-span-1"></div>
-                  </div>
-                  <div className="h-[10px] mt-[10px] animate-pulse max-w-[170px] bg-slate-200 rounded col-span-1"></div>
-                  <div className="h-[10px] mt-[10px] animate-pulse max-w-[70px] bg-slate-200 rounded col-span-1"></div>
-                  <Button className="w-full animate-pulse mt-[10px] bg-slate-200">
-                  </Button>
+          <div className="w-full">
+            <div className="flex justify-center items-center">
+              <h1 className="text-[40px] font-bold text-green-500">Top Rating</h1>
+            </div>
+            <div className="">
+              <div className="w-full h-[100%] shadow-inner my-[60px] overflow-hidden flex justify-center gap-[40px] flex-wrap rounded-md">
+                  {skletondata.map((item) => (
+                    <div className="rounded-[12px] overflow-hidden border h-[400px] w-[250px]">
+                      <div className="w-[250px] h-[200px] bg-slate-400"></div>
+                      <div className="px-[15px] pt-[10px]">
+                        <div className="h-[10px] animate-pulse bg-slate-200 rounded"></div>
+                        <div className="grid animate-pulse grid-cols-3 gap-4 mt-[10px]">
+                          <div className="h-[10px] bg-slate-200 rounded col-span-2"></div>
+                          <div className="h-[10px] bg-slate-200 rounded col-span-1"></div>
+                        </div>
+                        <div className="h-[10px] mt-[10px] animate-pulse max-w-[170px] bg-slate-200 rounded col-span-1"></div>
+                        <div className="h-[10px] mt-[10px] animate-pulse max-w-[70px] bg-slate-200 rounded col-span-1"></div>
+                        <Button className="w-full animate-pulse mt-[10px] bg-slate-200">
+                        </Button>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
-            ))} */}
+            </div>
+          </div>
+          <div className="w-full h-[100%] shadow-inner my-[60px] overflow-hidden flex justify-center gap-[40px] flex-wrap rounded-md">
             {/* <div className="rounded-[12px] overflow-hidden border h-[400px] w-[250px]">
               <div className="w-[250px] h-[200px] bg-slate-400"></div>
               <div className="px-[15px]">

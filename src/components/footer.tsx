@@ -1,17 +1,20 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Footer(){
     return (
         <div>
-            <div className="w-full bg-green-100">
+            <div className="w-full bg-green-100 rounded-t-[12px]">
                 <div className="w-full">
                     <div className="max-w-[1440px] min-h-[300px] mx-auto">
                     <footer className="relative bg-blueGray-200 pt-8 pb-6">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-wrap text-left lg:text-left">
                         <div className="w-full lg:w-6/12 px-4">
-                            <h4 className="text-3xl fonat-semibold text-blueGray-700">Logo</h4>
+                            <Link href={'/'}>
+                                <h1 className="text-[30px] drop-shadow-lg font-bold text-green-700"><span className="text-lime-600">Eco</span> market</h1>
+                            </Link>
                             <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
                             Find us on any of these platforms, we respond 1-2 business days.
                             </h5>
@@ -26,10 +29,10 @@ export default function Footer(){
                             </button>
                                 <button className="bg-white overflow-hidden text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                 <Image
-                                src={'https://banner2.cleanpng.com/20180712/skf/kisspng-computer-icons-logo-instagram-social-logo-5b47c6cf5eb370.9823746715314306073879.jpg'}
-                                alt="logo"
-                                width={45}
-                                height={25}
+                                    src={'https://banner2.cleanpng.com/20180712/skf/kisspng-computer-icons-logo-instagram-social-logo-5b47c6cf5eb370.9823746715314306073879.jpg'}
+                                    alt="logo"
+                                    width={45}
+                                    height={25}
                                 />
                                 </button>
                                 {/* <button className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
