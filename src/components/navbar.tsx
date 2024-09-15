@@ -117,8 +117,11 @@ export default function Navbar(){
                                 <div onClick={onCategory} className="w-full h-[30px] bg-slate-400 rounded-[6px] p-1">
                                     <li className="font-semibold text-start text-green-300">Categoriya</li>
                                 </div>
-                                <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                                    <div className="flex justify-center flex-wrap gap-[30px]">
+                                <Modal title="All Category" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                                    <div className="flex h-[400px] shadow-inner p-2 justify-center flex-wrap gap-[30px] overflow-y-scroll">
+                                        <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                        <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                        <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
                                         <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
                                         <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
                                         <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
