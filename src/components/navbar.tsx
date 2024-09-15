@@ -66,12 +66,12 @@ export default function Navbar(){
         <div className="w-full">
             <div className="w-full fixed z-50 items-center bg-green-400">
                 <div className="max-w-[1440px] flex justify-between items-center px-[20px] text-white mx-auto h-[40px] sm:border-b md:border-b bg-green-400">
-                    <div className="flex items-center justify-center sm:justify-between 2xl:justify-between lg:justify-between md:justify-between xl:justify-between">
+                    <div className="flex items-center justify-between sm:justify-between 2xl:justify-between lg:justify-between md:justify-between xl:justify-between">
                         <ul className="flex gap-[50px] mobilhidden">
                             <Link href={'/'}>
                                 <li className="font-semibold">Home</li>
                             </Link>
-                            <Link href={'/'}>
+                            <Link href={'/about'}>
                                 <li className="font-semibold">About</li>
                             </Link>
                             <Popover>
@@ -90,7 +90,7 @@ export default function Navbar(){
                                     </div>
                                 </PopoverContent>
                             </Popover>
-                            <Link href={'/'}>
+                            <Link href={'/delivery'}>
                                 <li className="font-semibold">Delivery_area</li>
                             </Link>
                         </ul>
@@ -109,7 +109,7 @@ export default function Navbar(){
                                         <li className="font-semibold text-green-300">Home</li>
                                     </div>
                                 </Link>
-                                <Link href={'/'}>
+                                <Link href={'/about'}>
                                     <div className="w-full h-[30px] bg-slate-400 rounded-[6px] p-1">
                                         <li className="font-semibold text-green-300">About</li>
                                     </div>
@@ -118,7 +118,7 @@ export default function Navbar(){
                                     <li className="font-semibold text-start text-green-300">Categoriya</li>
                                 </div>
                                 <Modal title="All Category" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                                    <div className="flex h-[400px] shadow-inner p-2 justify-center flex-wrap gap-[30px] overflow-y-scroll">
+                                    <div className="flex h-[300px] shadow-inner p-2 justify-center flex-wrap gap-[30px] overflow-y-scroll">
                                         <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
                                         <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
                                         <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
@@ -134,27 +134,13 @@ export default function Navbar(){
                                         <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
                                     </div>
                                 </Modal>
-                                <Link href={'/'}>
+                                <Link href={'/delivery'}>
                                     <div className="w-full h-[30px] bg-slate-400 rounded-[6px] p-1">
                                         <li className="font-semibold text-green-300">Delivery_area</li>
                                     </div>
                                 </Link>
                             </ul>
                             <ul className="flex mt-[20px] flex-col pb-[20px] border-b gap-[10px]">
-                                <Link href={'/'}>
-                                    <div className="w-full h-[30px] bg-slate-400 rounded-[6px]">
-                                        <li className="flex justify-between px-[5px] text-green-300 items-center font-semibold">
-                                            Card
-                                            <Image
-                                                className="fill-white text-white"
-                                                src={'/Shopping-Cart.gif'}
-                                                alt="category"
-                                                width={30}
-                                                height={30}
-                                            />
-                                        </li>
-                                    </div>
-                                </Link>
                                 <Link href={'/login'}>
                                     <div className="w-full h-[30px] bg-slate-400 rounded-[6px] p-1">
                                         <li className="font-semibold text-green-300">Login</li>
@@ -194,7 +180,7 @@ export default function Navbar(){
                                 </div>
                             </div>
                         </Drawer>
-                        <div className="sm:hidden md:hidden mobilhidden minwidthmobilhidden lg:hidden xl:flex 2xl:flex flex gap-[40px]">
+                        <div className="ml-[20px] mt-[7px] sm:hidden md:hidden mobilhidden minwidthmobilhidden lg:hidden xl:flex 2xl:flex flex gap-[40px]">
                             <h1 className="font-semibold">+998905843504</h1>
                             <h1 className="font-semibold">ibrohimbekmuhammadmusayev@gmail.com</h1>
                             <div className="flex gap-[10px]">
@@ -334,23 +320,6 @@ export default function Navbar(){
                                 />
                             </button>
                         </Link>
-                        <Modal title="All Category" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                            <div className="flex h-[350px] shadow-inner p-2 justify-center flex-wrap gap-[30px] overflow-y-scroll">
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
-                            </div>
-                        </Modal>
                         <Link className="w-full" href={'/'}>
                             <button className="bg-white border h-[55px] w-full flex justify-center items-center hover:bg-green-400">
                                 <Image
