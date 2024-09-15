@@ -312,10 +312,10 @@ export default function Navbar(){
                         </div>
                     </ul>
                 </div>
-                <div className="mobilblock sm:block md:hidden lg:hidden xl:hidden 2xl:hidden fixed items-center h-[50px] bottom-0 left-0 w-full bg-green-400">
+                <div className="mobilblock sm:block md:hidden lg:hidden xl:hidden 2xl:hidden fixed items-center h-[55px] bottom-0 left-0 w-full bg-green-400">
                     <div className="flex justify-between items-center">
                         <Link className="w-full" href={'/'}>
-                            <button className="bg-white border flex justify-center items-center h-[50px] w-full hover:bg-green-300">
+                            <button className="bg-white border flex justify-center items-center h-[55px] w-full hover:bg-green-400">
                                 <Image
                                     src={'/hause.png'}
                                     alt="home"
@@ -325,7 +325,7 @@ export default function Navbar(){
                             </button>
                         </Link>
                         <Link className="w-full" href={'/'}>
-                            <button onClick={onCategory} className="bg-white border h-[50px] w-full flex justify-center items-center hover:bg-green-300">
+                            <button onClick={onCategory} className="bg-white border h-[55px] w-full flex justify-center items-center hover:bg-green-400">
                                 <Image
                                     src={'/category-logo.svg'}
                                     alt="category"
@@ -352,7 +352,7 @@ export default function Navbar(){
                             </div>
                         </Modal>
                         <Link className="w-full" href={'/'}>
-                            <button className="bg-white border h-[50px] w-full flex justify-center items-center hover:bg-green-300">
+                            <button className="bg-white border h-[55px] w-full flex justify-center items-center hover:bg-green-400">
                                 <Image
                                     src={'/add.svg'}
                                     alt="add logo"
@@ -362,7 +362,7 @@ export default function Navbar(){
                             </button>
                         </Link>
                         {/* <Link className="w-full" href={'/'}>
-                            <button className="bg-white border h-[50px] w-full flex justify-center items-center hover:bg-green-300">
+                            <button className="bg-white border h-[55px] w-full flex justify-center items-center hover:bg-green-400">
                                 <Image
                                     src={'/love.svg'}
                                     alt="like logo"
@@ -372,7 +372,7 @@ export default function Navbar(){
                             </button>
                         </Link> */}
                         <Link className="w-full" href={'/cart'}>
-                            <button className="bg-white border h-[50px] w-full flex justify-center items-center hover:bg-green-300">
+                            <button className="bg-white border h-[55px] w-full flex justify-center items-center hover:bg-green-400">
                                 <Image
                                     src={'/shopping.svg'}
                                     alt="shopping logo"
@@ -382,7 +382,7 @@ export default function Navbar(){
                             </button>
                         </Link>
                         <Link className="w-full" href={'/'}>
-                            <button className="bg-white border h-[50px] w-full flex justify-center items-center hover:bg-green-300">
+                            <button className="bg-white border h-[55px] w-full flex justify-center items-center hover:bg-green-400">
                                 <Image
                                     src={'/user.svg'}
                                     alt="profile logo"
