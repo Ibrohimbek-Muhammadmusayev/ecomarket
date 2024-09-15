@@ -251,7 +251,6 @@ export default function Navbar(){
                             height={30}
                         />
                     </button>
-                    {/* asdasdasdasdasdasd */}
                     <Select
                         mode="multiple"
                         placeholder="Inserted are removed"
@@ -263,33 +262,15 @@ export default function Navbar(){
                             label: item,
                         }))}
                     />
-                    <Popover>
-                        <PopoverTrigger>
-                            <div className="mobilhidden sm:hidden flex items-center gap-[10px]">
-                                <div className="p-[5px] bg-green-800 rounded-[6px]">
-                                    <Image
-                                        src={'./category-logo.svg'}
-                                        alt="category"
-                                        width={30}
-                                        height={30}
-                                    />
-                                </div>
-                                <h1 className="text-[18px] font-semibold text-white">Category</h1>
-                            </div>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-full">
-                            <div className="w-[800px]">
-                                1
-                            </div>
-                            <div className="w-[800px]">
-                                2
-                            </div>
-                            <div className="w-[800px]">
-                                3
-                            </div>
-                        </PopoverContent>
-                    </Popover>
                     <ul className="sm:hidden md:flex lg:flex xl:flex 2xl:flex  flex gap-[20px]">
+                        <div className="bg-white flex justify-center items-center w-[50px] h-[36px] rounded-[6px] mobilhidden p-0">
+                            <Image
+                                src={'/love.svg'}
+                                alt="lices logo"
+                                width={20}
+                                height={20}
+                            />
+                        </div>
                         <Popover>
                             <PopoverTrigger>
                                 <div className="bg-white flex justify-center items-center w-[50px] h-[36px] rounded-[6px] mobilhidden p-0">
@@ -313,6 +294,14 @@ export default function Navbar(){
                                 </div>
                             </PopoverContent>
                         </Popover>
+                        <div className="bg-white flex justify-center items-center w-[50px] h-[36px] rounded-[6px] mobilhidden p-0">
+                            <Image
+                                src={'/user.svg'}
+                                alt="profile logo"
+                                width={20}
+                                height={20}
+                            />
+                        </div>
                         <div className="mobilhidden flex gap-[12px]">
                             <Link href={'/login'}>
                                 <Button className="bg-green-800">Login</Button>
@@ -322,6 +311,87 @@ export default function Navbar(){
                             </Link>
                         </div>
                     </ul>
+                </div>
+                <div className="mobilblock sm:block md:hidden lg:hidden xl:hidden 2xl:hidden fixed items-center h-[50px] bottom-0 left-0 w-full bg-green-400">
+                    <div className="flex justify-between items-center">
+                        <Link className="w-full" href={'/'}>
+                            <button className="bg-white border flex justify-center items-center h-[50px] w-full hover:bg-green-300">
+                                <Image
+                                    src={'/hause.png'}
+                                    alt="home"
+                                    width={30}
+                                    height={30}
+                                />
+                            </button>
+                        </Link>
+                        <Link className="w-full" href={'/'}>
+                            <button onClick={onCategory} className="bg-white border h-[50px] w-full flex justify-center items-center hover:bg-green-300">
+                                <Image
+                                    src={'/category-logo.svg'}
+                                    alt="category"
+                                    width={30}
+                                    height={30}
+                                />
+                            </button>
+                        </Link>
+                        <Modal title="All Category" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                            <div className="flex h-[400px] shadow-inner p-2 justify-center flex-wrap gap-[30px] overflow-y-scroll">
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                                <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
+                            </div>
+                        </Modal>
+                        <Link className="w-full" href={'/'}>
+                            <button className="bg-white border h-[50px] w-full flex justify-center items-center hover:bg-green-300">
+                                <Image
+                                    src={'/add.svg'}
+                                    alt="add logo"
+                                    width={30}
+                                    height={30}
+                                />
+                            </button>
+                        </Link>
+                        {/* <Link className="w-full" href={'/'}>
+                            <button className="bg-white border h-[50px] w-full flex justify-center items-center hover:bg-green-300">
+                                <Image
+                                    src={'/love.svg'}
+                                    alt="like logo"
+                                    width={30}
+                                    height={30}
+                                />
+                            </button>
+                        </Link> */}
+                        <Link className="w-full" href={'/cart'}>
+                            <button className="bg-white border h-[50px] w-full flex justify-center items-center hover:bg-green-300">
+                                <Image
+                                    src={'/shopping.svg'}
+                                    alt="shopping logo"
+                                    width={30}
+                                    height={30}
+                                />
+                            </button>
+                        </Link>
+                        <Link className="w-full" href={'/'}>
+                            <button className="bg-white border h-[50px] w-full flex justify-center items-center hover:bg-green-300">
+                                <Image
+                                    src={'/user.svg'}
+                                    alt="profile logo"
+                                    width={30}
+                                    height={30}
+                                />
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
