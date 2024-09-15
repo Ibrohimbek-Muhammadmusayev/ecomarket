@@ -335,7 +335,7 @@ export default function Navbar(){
                             </button>
                         </Link>
                         <Modal title="All Category" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                            <div className="flex h-[400px] shadow-inner p-2 justify-center flex-wrap gap-[30px] overflow-y-scroll">
+                            <div className="flex h-[350px] shadow-inner p-2 justify-center flex-wrap gap-[30px] overflow-y-scroll">
                                 <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
                                 <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
                                 <div className="w-[70px] rounded-sm h-[70px] bg-slate-500"></div>
